@@ -18,19 +18,3 @@ html {
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  background-color: var(--white);
-  color: var(--black);
-  font-family: var(--text-font);
-  font-size: 24px;
-}
-
-
-.wrapper {
-  background: url('./assets/images/hero-bg.png') no-repeat;
-  width: 100%;
-  background-size: cover;
-
-}
