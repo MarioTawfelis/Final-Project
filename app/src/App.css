@@ -11,16 +11,16 @@ body {
 .wrapper {
   background: url('./assets/images/hero-bg.png') no-repeat;
   width: 100%;
-  margin: 10px 10px;
-  background-size: auto 45%;
+  height: auto;
+  background-size: 100% 80%;
 }
-
 
 main {
   color: var(--white);
 }
 
 h1 {
+  margin: 20px;
   font-family: var(--logo-font);
   font-weight: 300;
 }
@@ -34,3 +34,14 @@ p {
   font-family: var(----text-font);
 }
 
+
+@media screen and (min-width: 600px) {
+  .wrapper {
+    background: url('./assets/images/hero-bg.png') no-repeat;
+    width: 100%;
+    height: auto;
+    margin: 10px 10px;
+    background-size: 100% 43%;
+  }
+
+}
