@@ -1,3 +1,6 @@
+/* Styling for mobile version */
+
+/* home page main text */
 .grid-wrapper {
     display: grid;
     grid-template-columns: 1fr;
@@ -10,6 +13,8 @@
     padding: 40px;
 }
 
+
+/* text content */
 .text-box h2 {
     margin: 30px 0px;
     font-size: 50px;
@@ -30,6 +35,7 @@
     color: var(--white);
 }
 
+/* mini-carousel */
 .carusel img {
     width: 400px;
 }
@@ -41,7 +47,51 @@
 }
 
 
+/* our products courusel */
 
+.collection {
+    margin: 100px;
+    text-align: center;
+}
+
+.product-items {
+    padding: 10px;
+}
+
+.product-item {
+    margin: 10px;
+    padding: 10px;
+    background: var(--gray-box);
+    border-radius: 20px;
+}
+
+.product-item img {
+    width: 80%;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.product-item h3 {
+    font-size: 20px;
+}
+
+.product-item p {
+    font-size: 13px;
+}
+
+.product-item button {
+    width: 180px;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: transparent;
+    border: 2px solid black;
+    border-radius: 5px;
+    box-shadow: 2px 3px 8px #a3a2a2;
+
+
+}
+
+/* styiling for desktop version */
 @media screen and (min-width: 600px) {
 
     .grid-wrapper {

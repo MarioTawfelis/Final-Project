@@ -1,6 +1,7 @@
 import React from 'react';
 import item from '../assets/images/hero-trainers.jpg'
 
+
 const CaruselView = () => {
   return (
     <div className='carusel'>
