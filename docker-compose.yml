@@ -23,11 +23,24 @@ services:
       - DB_PORT=5432
     depends_on:
       - db
-    links: 
+      - test
+    links:
       - db:db
     networks:
       - djangonetwork
-  
+
+  test:
+    image: postgres
+    container_name: postgresql-FP-test
+    environment:
+      - POSTGRES_DB=test_mydatabase
+      - POSTGRES_USER=mydatabaseuser
+      - POSTGRES_PASSWORD=mypassword
+    volumes:
+      - test-db-data:/var/lib/postgresql/data
+    networks:
+      - djangonetwork
+
   db:
     image: postgres
     container_name: postgresql-FP
@@ -46,3 +59,4 @@ networks:
 
 volumes:
   dev-db-data:
+  test-db-data:
