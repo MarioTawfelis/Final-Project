@@ -1,15 +1,11 @@
 /* Styling for mobile version */
 
 /* home page main text */
-.grid-wrapper {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    gap: 1rem;
-}
-
-.grid-wrapper div {
-    margin: 30px;
+.flex-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 25px;
 }
 
 
@@ -37,9 +33,14 @@
 
 /* mini-carousel */
 
+.carusel {
+    margin: 50px;
+    width: 250px;
+    padding: 10px;
+}
 
 .carusel img {
-    width: 65%;
+    width: 100%;
 }
 
 .carusel p {
@@ -102,22 +103,29 @@
 /* styiling for desktop version */
 @media screen and (min-width: 600px) {
 
-    .grid-wrapper {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto;
-        margin: 80px 50px;
+    .flex-wrapper {
+        flex-direction: row;
+        align-items: flex-start;
+        flex-wrap: nowrap;
+        margin: 50px;
     }
 
     .text-box {
-        grid-column: 1/2;
-        grid-row: 1/2;
         padding: 0 50px;
     }
 
+    .wrapper-carusel {
+        width: 100%;
+    }   
+
     .carusel {
-        grid-column: 2/3;
-        grid-row: 1/2;
+        /* margin: 30px; */
+        width: 600px;
     }
+
+    /* .carusel img{
+        width: 100%;
+    } */
 
 
     /* text content */

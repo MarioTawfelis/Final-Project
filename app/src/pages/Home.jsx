@@ -7,7 +7,7 @@ import Collection from "../components/Collection";
 const Home = () => {
   return (
     <>
-      <main className="grid-wrapper">
+      <main className="flex-wrapper">
         <MainText />
         <CaruselView />
       </main>
