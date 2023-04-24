@@ -12,7 +12,7 @@ body {
   background: url('./assets/images/hero-bg.png') no-repeat;
   width: 100%;
   height: auto;
-  background-size: cover;
+  background-size: 100% 50%;
 }
 
 main {
@@ -40,8 +40,7 @@ p {
     background: url('./assets/images/hero-bg.png') no-repeat;
     width: 100%;
     height: auto;
-    margin: 10px 10px;
-    background-size: 100% 43%;
+    background-size: 100% 20%;
   }
 
 }

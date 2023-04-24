@@ -13,15 +13,17 @@
 .text-box h2 {
     margin: 30px 0px;
     font-size: 40px;
+    padding: 15px;
 }
 
 .text-box p {
     font-size: 16px;
+    padding: 15px;
 }
 
 .text-box button {
     width: 50%;
-    margin-top: 10px;
+    margin: 10px 0 10px 15px;
     padding: 5px;
     background-color: transparent;
     border: 2px solid var(--white);
@@ -156,10 +158,45 @@ figure figcaption p {
 /* description */
 
 
-/* .description-box {
-    background: url('./assets/images/hero-bg.png') no-repeat;
-} */
+.description-box {
+    background: url('../assets/images/bg-headphones.jpg') no-repeat;
+    width: 100%;
+    background-image: linear-gradient(rgba(37, 37, 37, 0.363),rgba(41, 40, 40, 0.323)), url('../assets/images/bg-headphones.jpg');
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    color: rgb(255, 255, 255);
+}
 
+.description-box h2 {
+    margin: 0;
+    padding: 20px 40px;
+    font-size: 22px;
+}
+
+.description-box p {
+    font-size: 12px;
+    margin: 0;
+    padding: 8px 40px;
+}
+
+.description-box ul {
+    margin: 0;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 10px;
+}
+
+.description-box button {
+    margin: 10px 40px;
+    padding: 10px;
+    border: 1px solid var(--footer-bg-color);
+    border-radius: 6px;
+    background: var(--footer-bg-color);
+    color: whitesmoke;
+    width: 30%;
+    align-items: center;
+}
 
 
 /* styiling for desktop version */
@@ -334,6 +371,41 @@ figure figcaption p {
 
     figure figcaption p {
         font-size: 18px;
+    }
+
+    /* description */
+
+
+    .description-box {
+        background-size: cover;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        padding: 60px 0;
+    }
+
+    .description-box h2 {
+        font-size: 50px;
+        margin: 10px 20px;
+        padding: 20px 60px;
+    }
+
+    .description-box p {
+        font-size: 20px;
+        margin: 20px;
+        padding: 30px 60px;
+        line-height: 1.6;
+    }
+
+    .description-box ul {
+        font-size: 12px;
+        line-height: 2;
+        letter-spacing: 1px;
+    }
+
+    .description-box button {
+        margin-left: 80px;
+        padding: 10px 15px;
+        width: 18%;
     }
 
 }

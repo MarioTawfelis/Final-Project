@@ -1,7 +1,6 @@
 import React from "react";
 import accessories from "../assets/images/bg-accessories.jpg";
 import clothing from "../assets/images/bg-clothing.jpg";
-import headphones from "../assets/images/bg-headphones.jpg";
 import home from "../assets/images/bg-home.jpg";
 import tech from "../assets/images/bg-tech.jpg";
 import essentials from "../assets/images/Essentials.avif";
