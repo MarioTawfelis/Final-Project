@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'users',
     'ecommerce',
     'products',
+    'shipment',
     'postgresql_db',
 
 ]
