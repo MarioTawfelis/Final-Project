@@ -11,6 +11,6 @@ COPY ./ecommerce /ecommerce
 EXPOSE 8000
 
 RUN python -m venv /py && \
-    /py/bin/pip install -r /tmp/requirements.txt
+  /py/bin/pip install -r /tmp/requirements.txt
 
 ENV PATH='/py/bin:$PATH'
