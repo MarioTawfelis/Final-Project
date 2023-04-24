@@ -1,4 +1,4 @@
-from django.test import TestCase
+from django.test import TestCase, Client
 from django.core.exceptions import ValidationError
 from .models import UserProfile
 
@@ -239,3 +239,23 @@ class UserProfileTests(TestCase):
         self.client.login(email='superuser@example.com', password='test1234')
         response = self.client.get(USER_PROFILES_URL)
         self.assertEqual(response.status_code, status.HTTP_200_OK)
+
+class UserProfileViewTestCase(TestCase):
+    def setUp(self):
+        self.client = Client()
+        self.user = UserProfile.objects.create(
+            email='test@example.com',
+            first_name='John',
+            last_name='Doe',
+            default_phone='555-1234',
+            default_street_address_1='123 Main St',
+            default_city='Springfield',
+            default_country='USA'
+        )
+
+    def test_full_name(self):
+        url = reverse('userprofile-full-name', args=[self.user.pk])
+        response = self.client.get(url)
+
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(response.data['full_name'], 'John Doe')
