@@ -11,7 +11,9 @@ from .serializers import UserProfileSerializer
 
 
 class UserProfileModelTests(TestCase):
-
+    """
+    Test cases for the UserProfile model.
+    """
     def setUp(self):
         self.user = UserProfile.objects.create_user(
             email='test@example.com',
@@ -25,10 +27,9 @@ class UserProfileModelTests(TestCase):
             default_country='UK',
         )
 
-
     def test_create_user(self):
         """
-        Test creating a user with valid input
+        Test creating a user with valid input.
         """
         user = UserProfile.objects.create_user(
             email='test2@example.com',
@@ -42,7 +43,7 @@ class UserProfileModelTests(TestCase):
             default_country='UK',
         )
 
-        # Verify that the user was created with the correct details
+        # Verify that the user was created with the correct details.
         self.assertEqual(user.email, 'test2@example.com')
         self.assertEqual(user.first_name, 'Test2')
         self.assertEqual(user.last_name, 'User2')
@@ -55,7 +56,7 @@ class UserProfileModelTests(TestCase):
 
     def test_create_user_without_email(self):
         """
-        Test creating a user without email
+        Test creating a user without email.
         """
         with self.assertRaises(ValueError):
             UserProfile.objects.create_user(
@@ -72,7 +73,7 @@ class UserProfileModelTests(TestCase):
 
     def test_create_user_with_invalid_email(self):
         """
-        Test creating a user with invalid email format
+        Test creating a user with invalid email format.
         """
         with self.assertRaises(ValueError):
             UserProfile.objects.create_user(
@@ -89,7 +90,7 @@ class UserProfileModelTests(TestCase):
 
     def test_create_superuser(self):
         """
-        Test creating a superuser with valid input
+        Test creating a superuser with valid input.
         """
         superuser = UserProfile.objects.create_superuser(
             email='superuser@example.com',
@@ -102,7 +103,6 @@ class UserProfileModelTests(TestCase):
             default_city='Manchester',
             default_country='UK',
         )
-
         # Verify that the superuser was created with the correct details
         self.assertEqual(superuser.email, 'superuser@example.com')
         self.assertEqual(superuser.first_name, 'Super')
@@ -132,10 +132,28 @@ class UserProfileModelTests(TestCase):
 USER_PROFILES_URL = reverse('userprofile-list')
 
 class UserProfileTests(TestCase):
+    """
+    Test suite for the UserProfile model views.
+
+    Methods:
+    - setUp: method called before each test method.
+    - test_create_user_profile: test method for creating a new user profile.
+    - test_retrieve_user_profile: test method for retrieving a user profile.
+    - test_update_user_profile: test method for updating a user profile.
+    - test_delete_user_profile: test method for deleting a user profile.
+    - test_permissions: test method for testing permissions of user profiles.
+    """
+
     def setUp(self):
+        """
+        Method called before each test method.
+        """
         self.client = APIClient()
 
     def test_create_user_profile(self):
+        """
+        Test method for creating a new user profile.
+        """
         payload = {
             'email': 'test1@example.com',
             'first_name': 'John',
@@ -153,6 +171,9 @@ class UserProfileTests(TestCase):
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
 
     def test_retrieve_user_profile(self):
+        """
+        Test method for retrieving a user profile.
+        """
         user_profile = UserProfile.objects.create(
             email='test1@example.com',
             first_name='John',
@@ -169,6 +190,9 @@ class UserProfileTests(TestCase):
         self.assertEqual(response.data, serializer.data)
 
     def test_update_user_profile(self):
+        """
+        Test method for updating a user profile.
+        """
         user_profile = UserProfile.objects.create(
             email='test1@example.com',
             first_name='John',
@@ -187,6 +211,9 @@ class UserProfileTests(TestCase):
         self.assertEqual(user_profile.last_name, payload['last_name'])
 
     def test_delete_user_profile(self):
+        """
+        Test method for deleting a user profile.
+        """
         user_profile = UserProfile.objects.create(
             email='test1@example.com',
             first_name='John',
@@ -202,6 +229,9 @@ class UserProfileTests(TestCase):
         self.assertFalse(UserProfile.objects.filter(id=user_profile.id).exists())
 
     def test_permissions(self):
+        """
+        Test method for testing permissions of user profiles.
+        """
         user_profile = UserProfile.objects.create(
             email='test1@example.com',
             first_name='John',
@@ -241,7 +271,18 @@ class UserProfileTests(TestCase):
         self.assertEqual(response.status_code, status.HTTP_200_OK)
 
 class UserProfileViewTestCase(TestCase):
+    """
+    Test suite for the UserProfile view.
+
+    Methods:
+    - setUp: method called before each test method.
+    - test_full_name: test method for testing retrieval of a user's full name.
+    """
+
     def setUp(self):
+        """
+        Method called before each test method.
+        """
         self.client = Client()
         self.user = UserProfile.objects.create(
             email='test@example.com',
@@ -254,6 +295,9 @@ class UserProfileViewTestCase(TestCase):
         )
 
     def test_full_name(self):
+        """
+        Test method for testing retrieval of a user's full name.
+        """
         url = reverse('userprofile-full-name', args=[self.user.pk])
         response = self.client.get(url)
 
