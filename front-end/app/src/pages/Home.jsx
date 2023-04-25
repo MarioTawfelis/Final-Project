@@ -6,6 +6,7 @@ import Collection from "../components/Collection";
 import Categories from "../components/Categories";
 import Description from "../components/Description";
 
+
 const Home = () => {
   return (
     <>
