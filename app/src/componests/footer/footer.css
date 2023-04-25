@@ -1,0 +1,155 @@
+/* Import fonts from Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Jost:ital,wght@1,200&family=Manrope:wght@200&display=swap");
+/* Define root variables */
+:root {
+  /* Define custom font families */
+  --font-logo: "Bebas Neue", cursive;
+  --font-paragraph: "Jost", sans-serif;
+  --font-other: "Manrope", sans-serif;
+  --font-weight-other: 400;
+
+  /* Define color scheme */
+  --color-scheme: light;
+  --color-text: rgba(28, 26, 26, 0.87);
+  --color-bg: #ffffff;
+
+  /* Define text rendering properties */
+  --font-synthesis: none;
+  --text-rendering: optimizeLegibility;
+  --font-smoothing: antialiased;
+  --text-size-adjust: 100%;
+}
+p{
+  color: #ffffff;
+  font-size: 11px;
+}
+a{
+  color: #ffffff;
+  justify-content: space-around;
+}
+
+/* Apply custom font family and styles to footer logo */
+
+.footer_Logo {
+  font-family: var(--font-logo);
+  font-weight: bold;
+  font-size: 50px;
+  text-decoration: none;
+  margin-top: 10px;
+  margin-left: 30px;
+}
+
+/* Apply custom font family and styles to social media links */
+.Social_media {
+  font-family: var(--font-other);
+  font-size: 13px;
+  color: #ffffff;
+  margin-left: 30px;
+  margin-bottom: 5px;
+ 
+}
+
+
+/* Apply styles to FontAwesome icons */
+.social-section {
+  color: white;
+  font-size:-90px;
+  margin-top: -110px;
+}
+ .fa-icon  {
+  color: white;
+  font-size: 10px;
+  margin-left: 3px;
+  
+}
+.social-section .fa-icon  {
+  color: white;
+  font-size: 10px;
+  margin-left: 20px;
+  
+}
+
+/* Apply styles to product text */
+.products {
+  color: white;
+
+}
+/* Apply styles to category text */
+.category {
+  line-height: 5px;
+}
+/* Remove text decoration from links */
+.items {
+  text-decoration: none;
+  font-size: 15px;
+
+
+}
+/* Apply styles to footer section */
+.footer-section {
+  display: grid;
+  justify-content: center;
+  background-color: rgb(48, 47, 47);
+  justify-content: space-around;
+  height: auto;
+  font-size: 20px;
+}
+
+.footer-secion-row{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 50px;
+  
+}
+
+.footer {
+  background-color: rgb(10, 10, 10);
+  display: grid;
+}
+.copyright {
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  justify-content: center;
+}
+
+/* Footer styles end here */
+@media only screen and (max-width: 600px) {
+  
+  .footer-secion-row{
+    display: grid;
+    grid-template-columns:1fr;
+    gap: 20px;
+    
+  }
+  p{
+    color: #ffffff;
+    font-size: 15px;
+  }
+  a{
+    color: #ffffff;
+    justify-content: space-around;
+    font-size: 20px;
+  }
+  .footer_Logo  a{
+    font-family: var(--font-logo);
+    font-weight: bold;
+    font-size: 60px;
+    text-decoration: none;
+    margin-left: -30px;
+  }
+.Social_media {
+    font-size: 25px;
+    margin-left: -9px;
+
+  }
+  .social-section .fa-icon  {
+    color: white;
+    font-size: 20px;
+    margin-left: 10px;
+    margin-right: -10px;
+    
+    
+    
+  }
+}

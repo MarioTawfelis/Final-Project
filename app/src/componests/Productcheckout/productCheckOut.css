@@ -1,88 +1,48 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Jost:ital,wght@1,200&family=Manrope:wght@200&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Jost:ital,wght@1,200&family=Manrope:wght@200&display=swap');
 /* root */
-/* :root { */
+:root {
   /* Define custom font families */
-  /* --font-logo:'Bebas Neue', cursive;
+  --font-logo:'Bebas Neue', cursive;
   --font-paragraph: 'Jost', sans-serif;
   --font-other: 'Manrope', sans-serif;
-  --font-weight-other: 400; */
+  --font-weight-other: 400;
   
   /* Define color scheme */
-  /* --color-scheme: light;
+  --color-scheme: light;
   --color-text: rgba(28, 26, 26, 0.87);
-  --color-bg: #ffffff; */
+  --color-bg: #ffffff;
   
   /* Define text rendering properties */
-  /* --font-synthesis: none;
+  --font-synthesis: none;
   --text-rendering: optimizeLegibility;
   --font-smoothing: antialiased;
   --text-size-adjust: 100%;
-} */
+}
 
-/* p {
+p {
   font-family: var(--font-paragraph);
-} */
+}
 
 /* Apply custom font family and weight to other text elements */
-/* body, button, input, select, textarea {
+body, button, input, select, textarea {
   font-family: var(--font-other);
   font-weight: var(--font-weight-other);
-} */
+}
 
-/* Apply color scheme to elements
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-scheme: dark;
-    --color-text: rgba(255, 255, 255, 0.87);
-    --color-bg: #1f1f1f;
-  }
-} */
-
-/* body {
+body {
   color: var(--color-text);
   background-color: var(--color-bg);
-  background-image: url('./assets/hero-bg.png');
+  background-image: url('../../assets/hero-bg.png');
   background-repeat: no-repeat;
   background-size: cover;
-} */
+}
 
 /* Apply text rendering properties to elements */
-/* * {
+* {
   font-synthesis: var(--font-synthesis);
   text-rendering: var(--text-rendering);
   -webkit-font-smoothing: var(--font-smoothing);
   -moz-osx-font-smoothing: var(--font-smoothing);
   -webkit-text-size-adjust: var(--text-size-adjust);
-} */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* .me-3 {
-
-  font-weight: bold;
-  color: red;
-  background-color: red;
-} */
-/* .text-reset p a {
-  display: block;
-
-  
- } */
-
-
-
-
+}
 
