@@ -1,0 +1,62 @@
+version: "3.9"
+
+services:
+  ecommerce:
+    build:
+      context: .
+    container_name: django-FP
+    ports:
+    #local port to docker port
+      - "8000:8000"
+    volumes:
+    #map local app dir to docker app dir
+      - ./ecommerce:/ecommerce
+    command: >
+      /bin/sh -c 'python manage.py migrate &&
+      python manage.py runserver 0.0.0.0:8000'
+    #navigate to http://127.0.0.1:8000/ in your browser
+    environment:
+      - DB_HOST=db
+      - DB_NAME=pgdb
+      - DB_USER=pgdb
+      - DB_PASSWORD=pgdb
+      - DB_PORT=5432
+    depends_on:
+      - db
+      - test
+    links:
+      - db:db
+    networks:
+      - djangonetwork
+
+  test:
+    image: postgres
+    container_name: postgresql-FP-test
+    environment:
+      - POSTGRES_DB=test_mydatabase
+      - POSTGRES_USER=mydatabaseuser
+      - POSTGRES_PASSWORD=mypassword
+    volumes:
+      - test-db-data:/var/lib/postgresql/data
+    networks:
+      - djangonetwork
+
+  db:
+    image: postgres
+    container_name: postgresql-FP
+    volumes:
+      - dev-db-data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=pgdb
+      - POSTGRES_USER=pgdb
+      - POSTGRES_PASSWORD=pgdb
+    networks:
+      - djangonetwork
+
+networks:
+  djangonetwork:
+    driver: bridge
+
+volumes:
+  dev-db-data:
+  test-db-data:
