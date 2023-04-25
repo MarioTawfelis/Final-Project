@@ -33,35 +33,44 @@ class UserProfileManager(BaseUserManager):
         return self.create_user(email, password, **extra_fields)
 
 
-
 class UserProfile(AbstractBaseUser, PermissionsMixin):
     email = models.EmailField(_('email address'), unique=True, null=False)
     first_name = models.CharField(max_length=30, null=False)
     last_name = models.CharField(max_length=30, null=False)
     default_phone = models.CharField(max_length=20, null=False)
     default_street_address_1 = models.CharField(max_length=100, null=False)
-    default_street_address_2 = models.CharField(max_length=100)
+    default_street_address_2 = models.CharField(max_length=100, blank=True)
     default_city = models.CharField(max_length=50, null=False)
     default_country = models.CharField(max_length=50, null=False)
+    default_postcode = models.CharField(max_length=10, null=False)
     is_staff = models.BooleanField(default=False)
     is_superuser = models.BooleanField(default=False)
-    USERNAME_FIELD = 'email'
+    USERNAME_FIELD = "email"
     REQUIRED_FIELDS = []
 
     objects = UserProfileManager()
 
     class Meta:
-        verbose_name = _('user')
-        verbose_name_plural = _('users')
+        verbose_name = _("user")
+        verbose_name_plural = _("users")
 
     def __str__(self):
+        """
+        Returns string representation of the user instance.
+
+        Returns:
+            str: Email address of the user.
+        """
         return self.email
 
     def get_full_name(self):
         """
-        Returns the first_name plus the last_name, with a space in between.
+        Returns the full name of the user.
+
+        Returns:
+            str: Full name of the user (first name + last name).
         """
-        full_name = '%s %s' % (self.first_name, self.last_name)
+        full_name = "%s %s" % (self.first_name, self.last_name)
         return full_name.strip()
 
     def get_short_name(self):
