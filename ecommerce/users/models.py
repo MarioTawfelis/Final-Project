@@ -1,8 +1,4 @@
-from django.contrib.auth.models import (
-    AbstractBaseUser,
-    BaseUserManager,
-    PermissionsMixin,
-)
+from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 from django.core.validators import validate_email
@@ -12,26 +8,15 @@ from django.core.exceptions import ValidationError
 class UserProfileManager(BaseUserManager):
     def create_user(self, email, password=None, **extra_fields):
         """
-        Create and save a new user with the given email and password.
-
-        Args:
-            email (str): Email address of the user.
-            password (str): Password of the user.
-            **extra_fields: Additional fields to be saved for the user.
-
-        Returns:
-            UserProfile: Newly created user instance.
-
-        Raises:
-            ValueError: If email is not provided or has invalid format.
+        Creates and saves a User with the given email and password.
         """
         if not email:
-            raise ValueError("The Email field must be set")
+            raise ValueError('The Email field must be set')
 
         try:
             validate_email(email)
         except ValidationError:
-            raise ValueError("Invalid Email format")
+            raise ValueError('Invalid Email format')
 
         email = self.normalize_email(email)
         user = self.model(email=email, **extra_fields)
@@ -41,23 +26,15 @@ class UserProfileManager(BaseUserManager):
 
     def create_superuser(self, email, password=None, **extra_fields):
         """
-        Create and save a new superuser with the given email and password.
-
-        Args:
-            email (str): Email address of the superuser.
-            password (str): Password of the superuser.
-            **extra_fields: Additional fields to be saved for the superuser.
-
-        Returns:
-            UserProfile: Newly created superuser instance.
+        Creates and saves a superuser with the given email and password.
         """
-        extra_fields.setdefault("is_staff", True)
-        extra_fields.setdefault("is_superuser", True)
+        extra_fields.setdefault('is_staff', True)
+        extra_fields.setdefault('is_superuser', True)
         return self.create_user(email, password, **extra_fields)
 
 
 class UserProfile(AbstractBaseUser, PermissionsMixin):
-    email = models.EmailField(_("email address"), unique=True, null=False)
+    email = models.EmailField(_('email address'), unique=True, null=False)
     first_name = models.CharField(max_length=30, null=False)
     last_name = models.CharField(max_length=30, null=False)
     default_phone = models.CharField(max_length=20, null=False)
@@ -98,9 +75,6 @@ class UserProfile(AbstractBaseUser, PermissionsMixin):
 
     def get_short_name(self):
         """
-        Returns the short name of the user.
-
-        Returns:
-            str: Short name of the user (first name).
+        Returns the short name for the user.
         """
         return self.first_name
