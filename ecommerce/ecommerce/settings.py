@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     'products',
     'postgresql_db',
     'rest_framework.authtoken',
-    'rest_framework_json_api',
 ]
 
 AUTH_USER_MODEL = 'users.UserProfile'
