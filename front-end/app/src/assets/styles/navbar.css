@@ -1,0 +1,120 @@
+/* Nav styles */
+.toggle {
+    background: rgba(245, 245, 245, 0.366);
+    border: 2px solid var(--footer-bg-color);
+    border-radius: 8px;
+    margin: 5px 10px;
+}
+
+.toggle svg {
+    color: var(--footer-bg-color);
+}
+
+.logo {
+    font-family: var(--font-logo);
+    font-size: 40px;
+    margin-left: 5px;
+    color: #ffffff;
+    text-decoration: none;
+
+}
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.navbar ul li {
+    margin-right: 50px;
+}
+
+.navbar li:last-child {
+    margin-right: 0;
+}
+
+.nav-bar li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.nav-bar li a:hover {
+    color: black;
+}
+
+
+
+.nav-bar,
+.Cart {
+    padding: 10px;
+    text-decoration: none;
+    color: #ffffff;
+    display: flex;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.nav-bar:hover {
+    color: black;
+}
+
+
+.Cart {
+    display: flex;
+    font-size: 25px;
+    color: gray;
+    margin-left: auto;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+/* Add hover effect */
+.Cart :hover {
+    color: #ffffff;
+}
+
+
+.iconContainer {
+    display: flex;
+}
+
+
+/*mobile section*/
+
+/*==========================
+Sidebar navigation
+========================*/
+@media only screen and (max-width: 600px) {
+    .mobile-nav ul {
+        display: flex;
+        font-size: 20px;
+        flex-direction: column;
+        align-items: center;
+        transition: all 0.3s ease;
+        align-items: flex-start;
+    }
+   
+    .mobile-nav {
+        background: rgba(245, 245, 245, 0.122);
+        border: 1px solid rgba(245, 245, 245, 0.318);
+    }
+}
+
+
+
+
+
+/* Nav end here */
