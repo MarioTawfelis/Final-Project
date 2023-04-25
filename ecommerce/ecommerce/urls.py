@@ -17,6 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView
+from rest_framework.authtoken.views import obtain_auth_token
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -25,5 +26,6 @@ urlpatterns = [
     path('api/docs', SpectacularSwaggerView.as_view(url_name='api-schema'), name='api-docs'),
     path('users/', include('users.urls')),
     path('products/', include('products.urls')),
+    path('api-token-auth/', obtain_auth_token),
     # ... include any other app-specific URLs here ...
 ]

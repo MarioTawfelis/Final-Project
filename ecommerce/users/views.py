@@ -4,55 +4,47 @@ from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated
 from .serializers import UserProfileSerializer
 from .models import UserProfile
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
+from rest_framework import status
+
+class UserProfileViewSet(viewsets.ModelViewSet):
+    # queryset = UserProfile.objects.all()
+    # serializer_class = UserProfileSerializer
+
+    @api_view(['GET', 'POST'])
+    def user_list(request):
+        if request.method == 'GET':
+            users = UserProfile.objects.all()
+            serializer = UserProfileSerializer(users, many=True)
+            return Response(serializer.data)
+
+        elif request.method == 'POST':
+            serializer = UserProfileSerializer(data=request.data)
+            if serializer.is_valid():
+                serializer.save()
+                return Response(serializer.data, status=status.HTTP_201_CREATED)
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
-class UserProfileViewSet(
-    mixins.RetrieveModelMixin,
-    mixins.UpdateModelMixin,
-    mixins.CreateModelMixin,
-    viewsets.GenericViewSet,
-):
-    """
-    A viewset for viewing, creating, and editing user profiles.
-    """
+    @api_view(['GET', 'PUT', 'DELETE'])
+    def user_detail(request, pk):
+        try:
+            user = UserProfile.objects.get(pk=pk)
+        except UserProfile.DoesNotExist:
+            return Response(status=status.HTTP_404_NOT_FOUND)
 
-    queryset = UserProfile.objects.all()
-    serializer_class = UserProfileSerializer
-    # permission_classes = [IsAuthenticated]
+        if request.method == 'GET':
+            serializer = UserProfileSerializer(user)
+            return Response(serializer.data)
 
-    @action(detail=True, methods=["get"], name="Full Name")
-    def full_name(self, request, pk=None):
-        """
-        Returns the full name of a user given their ID.
+        elif request.method == 'PUT':
+            serializer = UserProfileSerializer(user, data=request.data)
+            if serializer.is_valid():
+                serializer.save()
+                return Response(serializer.data)
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-        Parameters:
-        request (Request): The request object.
-        pk (int): The ID of the user to get the full name for.
-
-        Returns:
-        Response: A response object containing the full name of the user.
-        """
-        user = self.get_object()
-        full_name = user.get_full_name()
-        return Response({"full_name": full_name})
-
-    def create(self, request):
-        """
-        Create a new user profile.
-
-        Parameters:
-        request (Request): The request object.
-
-        Returns:
-        Response: A response object containing the serialized user profile data.
-        """
-        serializer = self.get_serializer(data=request.data)
-        serializer.is_valid(raise_exception=True)
-        user_profile = serializer.save()
-        return Response(serializer.data, status=status.HTTP_201_CREATED)
-
-    def list(self, request):
-        queryset = self.filter_queryset(self.get_queryset())
-        serializer = self.get_serializer(queryset, many=True)
-
-        return Response(serializer.data)
+        elif request.method == 'DELETE':
+            user.delete()
+            return Response(status=status.HTTP_204_NO_CONTENT)
