@@ -5,7 +5,7 @@ import "./home.css";
 import Collection from "../components/Collection";
 import Categories from "../components/Categories";
 import Description from "../components/Description";
-
+import Footer from "../components/Footer";
 
 const Home = () => {
   return (
@@ -18,11 +18,14 @@ const Home = () => {
         <Collection />
       </section>
       <section>
-        < Categories />
+        <Categories />
       </section>
       <article>
-        < Description />
+        <Description />
       </article>
+      <footer>
+        <Footer />
+      </footer>
     </>
   );
 };

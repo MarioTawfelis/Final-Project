@@ -1,7 +1,6 @@
 import './App.css'
 import Home from './pages/Home'
 import Auth from './components/Auth'
-import Footer from './components/Footer'
 
 function App() {
   
@@ -11,7 +10,6 @@ function App() {
       {/* <Auth /> */}
       <nav>Logo, navbar</nav>
       <Home />
-      <Footer />
       {/* <footer>Footer</footer> */}
     </div>
   )
