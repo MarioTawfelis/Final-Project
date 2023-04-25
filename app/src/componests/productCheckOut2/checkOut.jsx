@@ -1,6 +1,7 @@
 import React from "react";
+import PriceSelector from "../../../../Productcheckout/PriceSelcetor";
 import {
-  MDBBtn,
+  // MDBBtn,
   MDBCard,
   MDBCardBody,
   MDBCardImage,
@@ -12,7 +13,7 @@ import {
 } from "mdb-react-ui-kit";
 import { useState } from "react";
 import { useEffect } from "react";
-import PriceSelector from '../Productcheckout/PriceSelcetor'
+// import PriceSelector from '../Productcheckout/PriceSelcetor'
 export default function ProductCards() {
     const [products, setProducts] = useState([]);
 
@@ -119,9 +120,9 @@ return (
               </MDBCol>
             </MDBRow>
           </MDBCardBody>
-        </MDBCard> */}
+        </MDBCard>  */}
 
-{/* <MDBCol md="2" lg="2" xl="2" className="mb-4">
+ {/* <MDBCol md="2" lg="2" xl="2" className="mb-4">
             <MDBCard>
               <MDBCardBody className="p-3">
                 <MDBTypography tag="h5" className="mb-3">
@@ -135,25 +136,29 @@ return (
                   </MDBTypography>
                 </MDBCardBody>
               </MDBCard>
-            </MDBCol> */}
+            </MDBCol>  */}
       
 
-        {/* <MDBCard className="mb-4">
+         {/* <MDBCard className="mb-4">
           <MDBCardBody className="p-4 d-flex flex-row">
             <MDBInput label="Discound code" wrapperClass="flex-fill" size="lg" />
             <MDBBtn className="ms-3" color="warning" outline size="lg">
               Apply
             </MDBBtn>
           </MDBCardBody>
-        </MDBCard>
+        </MDBCard> */}
 
-        <MDBCard>
+
+
+        {/* <MDBCard>
           <MDBCardBody>
             <MDBBtn className="ms-3" color="warning" block size="lg">
               Apply
             </MDBBtn>
           </MDBCardBody>
-        </MDBCard> */}
+        </MDBCard>  */}
+
+
       </MDBCol>
     </MDBRow>
   </MDBContainer>

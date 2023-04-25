@@ -1,9 +1,10 @@
 import './App.css';
 import './index.css';
-// import NavBar from './componests/nav/nav';
+import NavBar from './componests/nav/nav';
+import React from 'react';
 
 
-// import ProductCards from './componests/Productcheckout/ProductcheckOut';
+import ProductCards from './componests/Productcheckout/ProductcheckOut';
 
 import Footer from './componests/footer/footer'
 // import ProductCards from './componests/productCheckOut2/checkOut'
@@ -18,10 +19,9 @@ function App() {
       <ProductCards />
       </main>
       
-      <footer>
-        
+      {/* <footer>
         <Footer fixed ="botton"/>
-        </footer>
+        </footer> */}
     </div>
   )
 }

@@ -89,47 +89,6 @@ export default function Footer() {
     </a>
   </p>
 ))}
- 
-              {/* <p>
-                <a href="#" className="text-reset items">
-                  Essentials
-                </a>
-              </p>
-              <p>
-                <a href="#" className="text-reset items">
-                  Bed & Bath
-                </a>
-              </p>
-              <p>
-                <a href="#" className="text-reset items">
-                  Kitchen & Dining
-                </a>
-              </p>
-              <p>
-                <a href="#" className="text-reset items">
-                  Clearance
-                </a>
-              </p>
-              <p>
-                <a href="#" className="text-reset items">
-                  Deals
-                </a>
-              </p>
-              <p>
-                <a href="#" className="text-reset items">
-                  Jeans
-                </a>
-              </p>
-              <p>
-                <a href="#" className="text-reset items">
-                  Shirts
-                </a>
-              </p>
-              <p>
-                <a href="#" className="text-reset items">
-                  New Arrivals
-                </a>
-              </p> */}
             </MDBCol>
             {/* Display links to Contact categories with the same style as the product section */}
             <MDBCol md="4" lg="3" xl="3" className="mx-auto mb-md-0 mb-4 footer-section-columns ">
