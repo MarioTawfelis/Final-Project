@@ -1,13 +1,13 @@
 import './App.css'
-import './ProductListPage.css'
-import ProductList from './productList'
+import './checkoutPage.css'; // Import your CSS file
+import CheckoutPage from './StripePayment'
 
 function App() {
 
 
   return (
     <div className="App">
-      <ProductList/>
+      <CheckoutPage/>
     </div>
   )
 }
