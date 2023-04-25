@@ -1,6 +1,7 @@
 import './App.css'
 import Home from './pages/Home'
 import Auth from './components/Auth'
+import NavBar from './components/Navbar'
 
 function App() {
   
@@ -8,7 +9,7 @@ function App() {
   return (
     <div className="wrapper">
       {/* <Auth /> */}
-      <nav>Logo, navbar</nav>
+      <NavBar />
       <Home />
     </div>
   )
