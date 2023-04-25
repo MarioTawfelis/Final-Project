@@ -29,7 +29,7 @@ ALLOWED_HOSTS = ['127.0.0.1', '0.0.0.0']
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
+    #'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'users',
     'ecommerce',
     'products',
+    'shipment',
     'postgresql_db',
     'rest_framework.authtoken',
 ]
