@@ -14,7 +14,7 @@ class ShipmentSerializer(serializers.ModelSerializer):
 
 
 class ShipmentLineItemSerializer(serializers.ModelSerializer):
-    product = ProductSerializer(read_only=True)
+    product = ProductSerializer
 
     class Meta:
         model = ShipmentLineItem
