@@ -1,10 +1,11 @@
 from django.shortcuts import render
 from rest_framework import viewsets
-from .models import Product
-from .serializers import ProductSerializer
+from .models import Product, Tag
+from .serializers import ProductSerializer, TagSerializer
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework import status
+
 
 class ProductViewSet(viewsets.ModelViewSet):
     queryset = Product.objects.all()
@@ -15,17 +16,16 @@ class ProductViewSet(viewsets.ModelViewSet):
     def product_list(request, format=None):
 
         if request.method == 'GET':
-
-            #get all the Products
+            # get all the Products
             queryset = Product.objects.all()
 
-            #serialize them
+            # serialize them
             serializer_class = ProductSerializer(queryset, many=True)
 
-            #return json
-            #return JsonResponse({'products': serializer_class.data}, safe=False)
+            # return json
+            # return JsonResponse({'products': serializer_class.data}, safe=False)
 
-            #or return in the browser admin version
+            # or return in the browser admin version
             return Response(serializer_class.data)
 
         if request.method == 'POST':
@@ -57,3 +57,28 @@ class ProductViewSet(viewsets.ModelViewSet):
             serializer_class = ProductSerializer(queryset)
             queryset.delete()
             return Response(serializer_class.data, status=status.HTTP_204_NO_CONTENT)
+
+
+class TagViewSet(viewsets.ModelViewSet):
+    queryset = Tag.objects.all()
+    serializer_class = TagSerializer
+    basename = 'tag'
+
+    @api_view(['GET', 'POST'])
+    def tag_list(request, format=None):
+
+        if request.method == 'GET':
+            # get all the Tags
+            queryset = Tag.objects.all()
+
+            # serialize them
+            serializer_class = TagSerializer(queryset, many=True)
+
+            # or return in the browser admin version
+            return Response(serializer_class.data)
+
+        if request.method == 'POST':
+            serializer_class = TagSerializer(data=request.data)
+            if serializer_class.is_valid():
+                serializer_class.save()
+                return Response(serializer_class.data, status=status.HTTP_201_CREATED)
