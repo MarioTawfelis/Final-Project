@@ -10,7 +10,6 @@ function App() {
       {/* <Auth /> */}
       <nav>Logo, navbar</nav>
       <Home />
-      {/* <footer>Footer</footer> */}
     </div>
   )
 }
