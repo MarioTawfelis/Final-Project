@@ -9,8 +9,9 @@ from rest_framework.response import Response
 from rest_framework import status
 
 class UserProfileViewSet(viewsets.ModelViewSet):
-    # queryset = UserProfile.objects.all()
-    # serializer_class = UserProfileSerializer
+    queryset = UserProfile.objects.all()
+    serializer_class = UserProfileSerializer
+    basename = 'users'
 
     @api_view(['GET', 'POST'])
     def user_list(request):
