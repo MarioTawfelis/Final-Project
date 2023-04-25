@@ -13,7 +13,7 @@ class ProductViewSet(viewsets.ModelViewSet):
 
     @api_view(['GET', 'POST'])
     def product_list(request, format=None):
-
+      
         if request.method == 'GET':
 
             #get all the Products
