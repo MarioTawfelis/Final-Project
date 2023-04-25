@@ -5,8 +5,8 @@ import './index.css';
 
 // import ProductCards from './componests/Productcheckout/ProductcheckOut';
 
-// import Footer from './componests/footer/footer'
-import ProductCards from './componests/productCheckOut2/checkOut'
+import Footer from './componests/footer/footer'
+// import ProductCards from './componests/productCheckOut2/checkOut'
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
       
       <footer>
         
-        {/* <Footer fixed ="botton"/> */}
+        <Footer fixed ="botton"/>
         </footer>
     </div>
   )
