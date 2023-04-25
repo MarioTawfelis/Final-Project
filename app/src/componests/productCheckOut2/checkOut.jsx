@@ -66,7 +66,7 @@ return (
 
               <MDBCol md="3" lg="2" xl="2" className="offset-lg-1">
                 <MDBTypography tag="h5" className="mb-0">
-                  ${""}
+                ${product.selectedPrice || product.fields.price}
                   
                 </MDBTypography>
               </MDBCol>
@@ -121,7 +121,21 @@ return (
           </MDBCardBody>
         </MDBCard> */}
 
-
+{/* <MDBCol md="2" lg="2" xl="2" className="mb-4">
+            <MDBCard>
+              <MDBCardBody className="p-3">
+                <MDBTypography tag="h5" className="mb-3">
+                  Summary
+                </MDBTypography>
+                <MDBTypography tag="p" className="mb-2">
+                  Total items: {products.length}
+                </MDBTypography>
+                <MDBTypography tag="p" className="mb-2">
+                  Total: {price}
+                  </MDBTypography>
+                </MDBCardBody>
+              </MDBCard>
+            </MDBCol> */}
       
 
         {/* <MDBCard className="mb-4">

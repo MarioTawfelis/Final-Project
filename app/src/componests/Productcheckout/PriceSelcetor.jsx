@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { MDBBtn, MDBInput, MDBCol, MDBTypography } from "mdb-react-ui-kit";
-import {MDBIcon} from "mdb-react-ui-kit";
+import { MDBBtn, MDBInput, MDBCol, MDBTypography, MDBIcon } from "mdb-react-ui-kit";
 
 function PriceSelector() {
   const [price, setPrice] = useState(1);
@@ -32,8 +31,7 @@ function PriceSelector() {
         </MDBBtn>
         <MDBInput min={0} value={price} type="number" size="sm" onChange={handlePriceChange} />
         <MDBBtn color="link" className="px-2" onClick={increasePrice}>
-          <MDBIcon fas icon="plus" />
-        </MDBBtn>
+        <MDBIcon fas icon="plus" />        </MDBBtn>
       </MDBCol>
       <MDBCol md="3" lg="2" xl="2" className="offset-lg-1">
         <MDBTypography tag="h5" className="mb-0">
