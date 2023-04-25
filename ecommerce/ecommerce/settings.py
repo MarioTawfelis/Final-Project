@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'ecommerce',
     'products',
     'shipment',
+    'payments.apps.PaymentsConfig',
     'postgresql_db',
     'rest_framework.authtoken',
 ]
@@ -152,3 +153,7 @@ SPECTACULAR_SETTINGS = {
     'SERVE_INCLUDE_SCHEMA': False,
     # OTHER SETTINGS
 }
+
+# Stripe authentication
+STRIPE_PUBLISHABLE_KEY = '<your test publishable key here>'
+STRIPE_SECRET_KEY = '<your test secret key here>'
