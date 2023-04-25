@@ -43,7 +43,6 @@ INSTALLED_APPS = [
     'shipment',
     'postgresql_db',
     'rest_framework.authtoken',
-    'shipment',
 ]
 
 AUTH_USER_MODEL = 'users.UserProfile'
