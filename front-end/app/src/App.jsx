@@ -8,11 +8,14 @@ import './App.css'
 import './assets/styles/checkoutPage.css'; // Import your CSS file
 import CheckoutPage from './pages/StripePayment'
 import ProductList from './pages/productList';
+import Footer from './components/Footer';
+import NavBar from './components/NavBar';
 
 
 function App() {
   return (
     <div className="wrapper">
+      < NavBar />
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/" element={<Home />} />
@@ -21,6 +24,7 @@ function App() {
         <Route path='/checkout' element={<CheckoutPage />} />
         <Route path='/product-list' element={<ProductList />} />
       </Routes>
+      <Footer />
     </div>
   );
 }
