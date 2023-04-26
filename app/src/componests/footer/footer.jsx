@@ -8,12 +8,15 @@ import {
   MDBIcon,
 } from "mdb-react-ui-kit";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import './footer.css';
+import './footer.css'
+// import categories from '../../../categories.json'
 
 
 
 export default function Footer() {
   const [categories, setCategories] = useState([]);
+
+
 
   useEffect(() => {
     const fetchCategories = async () => {
@@ -23,6 +26,8 @@ export default function Footer() {
       setCategories(data);
     };
     fetchCategories();
+    console.log(setCategories);
+
   }, []);
 
 
@@ -85,7 +90,7 @@ export default function Footer() {
               {categories.length > 0 && categories.map((category) => (
   <p key={category.pk}>
     <a href="#" className="text-reset items">
-      {category.name}
+      {category.fields.friendly_name}
     </a>
   </p>
 ))}
