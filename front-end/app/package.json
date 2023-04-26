@@ -18,7 +18,8 @@
     "react-icons": "^4.8.0",
     "react-multi-carousel": "^2.8.3",
     "react-router": "^6.10.0",
-    "react-router-dom": "^6.10.0"
+    "react-router-dom": "^6.10.0",
+    "stripe": "^12.2.0"
   },
   "devDependencies": {
     "@fortawesome/fontawesome": "^1.1.8",

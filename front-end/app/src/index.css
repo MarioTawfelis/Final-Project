@@ -8,7 +8,7 @@
   --orange: #FF7E1B;
 
   --font-size: 24px;
-  
+
   --logo-font: 'Bebas Neue', cursive, monospace; /* used for logo and main headers */
   --paragr-font: 'Jost', sans-serif;  /*used for paragraph leads*/
   --text-font: 'Manrope', sans-serif; /* used for all other text */
@@ -17,4 +17,3 @@
 html {
   box-sizing: border-box;
 }
-

@@ -157,14 +157,11 @@ SPECTACULAR_SETTINGS = {
     # OTHER SETTINGS
 }
 
-<<<<<<< HEAD
 CORS_ORIGIN_ALLOW_ALL = True
 
 CORS_ALLOW_CREDENTIALS = True
 
 AUTHENTICATION_BACKENDS = ['django.contrib.auth.backends.AllowAllUsersModelBackend']
-=======
 # Stripe authentication
 STRIPE_PUBLISHABLE_KEY = '<your test publishable key here>'
 STRIPE_SECRET_KEY = '<your test secret key here>'
->>>>>>> 71fc33d3086b6fdc49969e58631cab463de441b5
