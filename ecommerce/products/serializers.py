@@ -8,10 +8,7 @@ class TagSerializer(serializers.ModelSerializer):
         fields = ('name', 'friendly_name')
 
 
-
 class ProductSerializer(serializers.ModelSerializer):
-
-
     tags = TagSerializer()
 
     def create(self, validated_data):
@@ -19,7 +16,6 @@ class ProductSerializer(serializers.ModelSerializer):
         product = Product.objects.create(**validated_data)
         Tag.objects.create(product=product, **tags)
         return product
-
 
     class Meta:
         model = Product

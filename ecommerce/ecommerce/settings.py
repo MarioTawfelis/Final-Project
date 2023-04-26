@@ -155,5 +155,5 @@ SPECTACULAR_SETTINGS = {
 }
 
 # Stripe authentication
-STRIPE_PUBLISHABLE_KEY = '<your test publishable key here>'
-STRIPE_SECRET_KEY = '<your test secret key here>'
+STRIPE_PUBLISHABLE_KEY = 'pk_test_51N0qoiAGz7IbkB9OGbRX3HVdPoN6Et3IdP3yxKyaDK5y7UhM2KszJ9eNoanKWnIFAVciEYUSzoGc1qSAgMAji5FN00uCFho74i'
+STRIPE_SECRET_KEY = 'sk_test_51N0qoiAGz7IbkB9OOedUaFdHqNwqkUAwQ7p9BxNThUTqNgPBn5kTnKomTYTx15qseR5LDMavSTa8rPDfGs0ckMiL00i6oqtfeI'

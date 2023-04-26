@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Stripe from 'stripe';
 
-const stripe = new Stripe('PUBLISHABLE_KEY_HERE');
+const stripe = new Stripe('pk_test_51N0qoiAGz7IbkB9OGbRX3HVdPoN6Et3IdP3yxKyaDK5y7UhM2KszJ9eNoanKWnIFAVciEYUSzoGc1qSAgMAji5FN00uCFho74i');
 
 const CheckoutPage = () => {
   // Initialize state for form inputs
