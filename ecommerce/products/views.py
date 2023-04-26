@@ -54,7 +54,7 @@ def product_detail(request, id, format=None):
         except Product.DoesNotExist:
             return Response(status=status.HTTP_404_NOT_FOUND)
 
-        serializer_class = ProductSerializer(queryset, data=request.data)
+        serializer_class = ProductSerializer(queryset, data=request.data['fields'])
         if serializer_class.is_valid():
             serializer_class.save()
             return Response(serializer_class.data, status=status.HTTP_201_CREATED)
@@ -71,26 +71,10 @@ def product_detail(request, id, format=None):
         except Product.DoesNotExist:
             return Response(status=status.HTTP_404_NOT_FOUND)
 
-
-
-
-# def is_json(value):
-#     try:
-#         json.loads(value)
-#         print(222)
-#     except (ValueError, TypeError):
-#         print(111)
-#         return False
-#     return True
-
-
 class ProductViewSet(viewsets.ModelViewSet):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
     basename = 'product'
-
-
-
 
 class TagViewSet(viewsets.ModelViewSet):
     queryset = Tag.objects.all()
