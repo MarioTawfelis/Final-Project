@@ -6,7 +6,7 @@ function UserProfilePage() {
   const { id } = useParams();
 
   useEffect(() => {
-    fetch(`http://127.0.0.1:8000//users/user-profiles/${id}/`, {
+    fetch(`http://127.0.0.1:8000/users/user-profiles/${id}/`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json'
