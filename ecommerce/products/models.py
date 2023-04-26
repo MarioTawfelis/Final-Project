@@ -4,10 +4,10 @@ from django.db import models
 class Product(models.Model):
     sku = models.CharField(max_length=255)
     name = models.CharField(max_length=255)
-    tags = models.ManyToManyField('Tag', blank=True)
+    tags = models.ManyToManyField('Tag', null=True, blank=True)
     description = models.TextField()
-    has_sizes = models.BooleanField()
-    inventory_count = models.IntegerField()
+    has_sizes = models.BooleanField(null=True, blank=True)
+    inventory_count = models.IntegerField(null=True, blank=True)
     retail_price = models.DecimalField(max_digits=10, decimal_places=2)
     image = models.ImageField(upload_to='product_image', null=True, blank=True)
     image_url = models.URLField(null=True, blank=True)

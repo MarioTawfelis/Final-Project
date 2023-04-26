@@ -44,10 +44,10 @@ INSTALLED_APPS = [
     'users',
     'ecommerce',
     'products',
-    'postgresql_db',
-    'rest_framework.authtoken',
+    'shipment',
     'payments.apps.PaymentsConfig',
-    
+    'postgresql_db',
+    'rest_framework.authtoken',    
 ]
 
 AUTH_USER_MODEL = 'users.UserProfile'
@@ -160,4 +160,6 @@ SPECTACULAR_SETTINGS = {
     'VERSION': '1.0.0',
     'SERVE_INCLUDE_SCHEMA': False,
     # OTHER SETTINGS
+
 }
+
