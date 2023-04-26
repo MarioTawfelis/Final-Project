@@ -7,8 +7,8 @@ import RegistrationPage from './components/UserRegistration';
 import Footer from './components/Footer';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css'
-import './checkoutPage.css'; // Import your CSS file
-import CheckoutPage from './StripePayment'
+import './assets/styles/checkoutPage.css';
+import CheckoutPage from './components/StripePayment'
 
 
 function App() {
