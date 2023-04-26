@@ -54,7 +54,7 @@ function NavBar() {
         ) : (
           <ul className="nav">
             <li>
-              <a className="nav-bar" href="#home">
+              <a className="nav-bar" href="/">
                 Home
               </a>
             </li>
