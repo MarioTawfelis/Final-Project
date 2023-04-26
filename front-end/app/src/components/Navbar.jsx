@@ -59,7 +59,7 @@ function NavBar() {
               </a>
             </li>
             <li>
-              <a className="nav-bar" href="#Our Products">
+              <a className="nav-bar" href="/product-list">
                 Our Products
               </a>
             </li>
@@ -72,6 +72,12 @@ function NavBar() {
               <a className="nav-bar" href="/login">
 
                 Login
+              </a>
+            </li>
+            <li>
+              <a className="nav-bar" href="/user-registration">
+
+                Sign Up
               </a>
             </li>
             <li>
