@@ -27,5 +27,6 @@ urlpatterns = [
     path('users/', include('users.urls')),
     path('products/', include('products.urls')),
     path('api-token-auth/', obtain_auth_token),
+    path('shipments/', include('shipment.urls'))
     # ... include any other app-specific URLs here ...
 ]
