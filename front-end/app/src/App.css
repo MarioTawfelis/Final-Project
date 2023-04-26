@@ -37,6 +37,10 @@ p {
   cursor: pointer;
  }
 
+ button:hover {
+  background: rgba(245, 245, 245, 0.779);
+ }
+
 
 @media screen and (min-width: 600px) {
   .wrapper {

@@ -69,6 +69,12 @@ function NavBar() {
               </a>
             </li>
             <li>
+              <a className="nav-bar" href="/login">
+
+                Login
+              </a>
+            </li>
+            <li>
               <a className="Cart" href="#cart">
                 <BsCart />
               </a>

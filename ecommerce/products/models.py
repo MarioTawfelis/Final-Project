@@ -4,7 +4,7 @@ from django.db import models
 class Product(models.Model):
     sku = models.CharField(max_length=255)
     name = models.CharField(max_length=255)
-    tags = models.ManyToManyField('Tag', blank=True)
+    tags = models.ManyToManyField('Tag', null=True, blank=True)
     description = models.TextField()
     has_sizes = models.BooleanField()
     inventory_count = models.IntegerField()

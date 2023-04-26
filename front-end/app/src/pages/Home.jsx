@@ -6,10 +6,12 @@ import Collection from "../components/Collection";
 import Categories from "../components/Categories";
 import Description from "../components/Description";
 import Footer from "../components/Footer";
+import NavBar from "../components/NavBar";
 
 const Home = () => {
   return (
     <>
+      <NavBar />
       <main className="flex-wrapper">
         <MainText />
         <CaruselView />
