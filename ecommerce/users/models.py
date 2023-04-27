@@ -35,16 +35,16 @@ class UserProfileManager(BaseUserManager):
 
 class UserProfile(AbstractBaseUser, PermissionsMixin):
     email = models.EmailField(_('email address'), unique=True, null=False)
-    first_name = models.CharField(max_length=30, null=False)
-    last_name = models.CharField(max_length=30, null=False)
-    default_phone = models.CharField(max_length=20, null=False)
-    default_street_address_1 = models.CharField(max_length=100, null=False)
+    first_name = models.CharField(max_length=30, null=True)
+    last_name = models.CharField(max_length=30, null=True)
+    default_phone = models.CharField(max_length=20, null=True)
+    default_street_address_1 = models.CharField(max_length=100, null=True)
     default_street_address_2 = models.CharField(max_length=100, blank=True)
-    default_city = models.CharField(max_length=50, null=False)
-    default_country = models.CharField(max_length=50, null=False)
-    default_postcode = models.CharField(max_length=10, null=False)
-    is_staff = models.BooleanField(default=False)
-    is_superuser = models.BooleanField(default=False)
+    default_city = models.CharField(max_length=50, null=True)
+    default_country = models.CharField(max_length=50, null=True)
+    default_postcode = models.CharField(max_length=10, null=True)
+    is_staff = models.BooleanField(default=True)
+    is_superuser = models.BooleanField(default=True)
     USERNAME_FIELD = "email"
     REQUIRED_FIELDS = []
 

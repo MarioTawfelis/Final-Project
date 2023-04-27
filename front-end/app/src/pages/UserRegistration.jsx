@@ -23,14 +23,6 @@ function RegistrationPage() {
       body: JSON.stringify({
         email: email,
         password: password,
-        first_name: firstName,
-        last_name: lastName,
-        default_phone: phone,
-        default_street_address_1: streetAddress1,
-        default_street_address_2: streetAddress2,
-        default_city: city,
-        default_country: country,
-        default_postcode: postcode,
       }),
     })
       .then((response) => {
@@ -73,7 +65,7 @@ function RegistrationPage() {
             />
             <button type="submit">Register</button>
           </div>
-          
+
         </form>
       </div>
     </div>

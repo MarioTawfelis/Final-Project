@@ -4,7 +4,11 @@ import Login from './pages/Login';
 import UserProfile from './pages/UserProfile';
 import RegistrationPage from './pages/UserRegistration';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import NavBar from './components/NavBar';
+import CheckoutPage from './pages/StripePayment';
+import ProductList from './pages/ProductList';
 import './App.css'
+import Footer from './components/Footer';
 // import CheckoutPage from './StripePayment'
 
 
