@@ -10,11 +10,15 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
+import os
 from pathlib import Path
 from os import environ
 
+opsys = os
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+#BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
@@ -43,7 +47,7 @@ INSTALLED_APPS = [
     'shipment',
     'payments.apps.PaymentsConfig',
     'postgresql_db',
-    'rest_framework.authtoken',
+    'rest_framework.authtoken',    
 ]
 
 AUTH_USER_MODEL = 'users.UserProfile'
@@ -64,7 +68,7 @@ ROOT_URLCONF = 'ecommerce.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -136,6 +140,10 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+STRIPE_SECRET_KEY = 'sk_test_51N0nHiLWQkz6KPGp1GiI1gXIeu6njKoi9mAbpoNUl7JB5xJac6l5yotfDCVuSDzUWClSD5eazh9XVQwDJvw9TD9300tt1SwHSf'
+STRIPE_PUBLISHABLE_KEY = 'pk_test_51N0nHiLWQkz6KPGpYf9YhZRdlalLkb8fD5VPXd0DQJ6XixQF3HwAVBzOktTrja0PRu9A59AvABGehqV1bsxkGpER00gsFDMFoi'
+
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
@@ -152,8 +160,6 @@ SPECTACULAR_SETTINGS = {
     'VERSION': '1.0.0',
     'SERVE_INCLUDE_SCHEMA': False,
     # OTHER SETTINGS
+
 }
 
-# Stripe authentication
-STRIPE_PUBLISHABLE_KEY = '<your test publishable key here>'
-STRIPE_SECRET_KEY = '<your test secret key here>'
