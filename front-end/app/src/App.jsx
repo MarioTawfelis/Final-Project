@@ -4,12 +4,14 @@ import Login from './pages/Login';
 import UserProfile from './pages/UserProfile';
 import RegistrationPage from './pages/UserRegistration';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import NavBar from './components/NavBar';
-import CheckoutPage from './pages/StripePayment';
-import ProductList from './pages/ProductList';
 import './App.css'
+import './assets/styles/checkoutPage.css'; // Import your CSS file
+import CheckoutPage from './pages/StripePayment'
+import ProductList from './pages/productList';
 import Footer from './components/Footer';
-// import CheckoutPage from './StripePayment'
+import NavBar from './components/NavBar';
+import Error404 from './pages/errorPage';
+import Contact from './pages/contact';
 
 
 function App() {
@@ -23,6 +25,8 @@ function App() {
         <Route path='/user-registration' element={<RegistrationPage />} />
         <Route path='/checkout' element={<CheckoutPage />} />
         <Route path='/product-list' element={<ProductList />} />
+        <Route path='/contact' element={<Contact />} />
+        <Route path="*" element={<Error404 />} />
       </Routes>
       <Footer />
     </div>

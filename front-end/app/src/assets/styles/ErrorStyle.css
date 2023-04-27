@@ -1,0 +1,44 @@
+.error-page {
+    background-color: #f2f2f2;
+    color: #444;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 50px;
+  }
+  
+  .error-title {
+    font-size: 8em;
+    margin-bottom: 20px;
+  }
+  
+  .error-subtitle {
+    font-size: 4em;
+    margin-bottom: 30px;
+  }
+  
+  .error-message {
+    font-size: 2em;
+    margin-bottom: 30px;
+  }
+  
+  .error-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .error-links li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  
+  .error-links a {
+    color: #444;
+    text-decoration: none;
+    font-size: 1.5em;
+  }
+  
+  .error-links a:hover {
+    text-decoration: underline;
+  }
+  
