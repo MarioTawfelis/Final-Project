@@ -1,4 +1,4 @@
-form {
+.strip-payment form {
   display: flex;
   flex-direction: column;
   width: 300px;
@@ -8,19 +8,19 @@ form {
   border-radius: 10px;
 }
 
-form > div {
+.strip-payment form > div {
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
 }
 
-label {
+.strip-payment label {
   font-size: 14px;
   color: #333;
   margin-bottom: 5px;
 }
 
-input {
+.strip-payment input {
   padding: 10px;
   border-radius: 5px;
   border: none;
@@ -28,7 +28,7 @@ input {
   text-align: center;
 }
 
-button {
+.strip-payment button {
   background-image: linear-gradient(to bottom, #ff8c00, #ff6f00);
   border-radius: 5px;
   border: none;
@@ -39,20 +39,20 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+.strip-payment button:hover {
   background-image: linear-gradient(to bottom, #ff69b4, #ff1493);
 }
 
-button:first-child {
+.strip-payment button:first-child {
   width: 100%;
 }
 
-.success-message {
+.strip-payment .success-message {
   color: green;
   margin-top: 10px;
 }
 
-.error-message {
+.strip-payment .error-message {
   color: red;
   margin-top: 10px;
 }

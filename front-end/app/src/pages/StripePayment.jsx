@@ -60,7 +60,7 @@ const CheckoutPage = () => {
   };
 
   return (
-    <div>
+    <div className='strip-payment'>
       <h2>Checkout Page</h2>
       <button onClick={handleSwitchToPayPal}>Pay with PayPal</button>
       <form onSubmit={handleSubmit}>

@@ -5,11 +5,7 @@ import UserProfile from './pages/UserProfile';
 import RegistrationPage from './pages/UserRegistration';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css'
-import './assets/styles/checkoutPage.css'; // Import your CSS file
-import CheckoutPage from './pages/StripePayment'
-import ProductList from './pages/productList';
-import Footer from './components/Footer';
-import NavBar from './components/NavBar';
+// import CheckoutPage from './StripePayment'
 
 
 function App() {
