@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import products from '../../../../app/src/products.json';
-import categories from '../../../../app/src/categories.json';
+import products from '../products.json';
+import categories from '../categories.json';
 import '../assets/styles/productListPage.css';
 
 function ProductList() {
