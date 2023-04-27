@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /* @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Jost:ital,wght@1,200&family=Manrope:wght@200&display=swap'); */
 /* root */
 /* :root { */
@@ -7,12 +6,12 @@
   --font-paragraph: 'Jost', sans-serif;
   --font-other: 'Manrope', sans-serif;
   --font-weight-other: 400; */
-  
+
   /* Define color scheme */
   /* --color-scheme: light;
   --color-text: rgba(28, 26, 26, 0.87);
   --color-bg: #ffffff; */
-  
+
   /* Define text rendering properties */
   /* --font-synthesis: none;
   --text-rendering: optimizeLegibility;
@@ -80,14 +79,13 @@
 /* .text-reset p a {
   display: block;
 
-  
+
  } */
 
 
 
 
 
-=======
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -157,4 +155,3 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
->>>>>>> 71fc33d3086b6fdc49969e58631cab463de441b5

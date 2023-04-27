@@ -11,7 +11,6 @@ import NavBar from "../components/NavBar";
 const Home = () => {
   return (
     <>
-      <NavBar />
       <main className="flex-wrapper">
         <MainText />
         <CaruselView />
@@ -25,9 +24,6 @@ const Home = () => {
       <article>
         <Description />
       </article>
-      <footer>
-        <Footer />
-      </footer>
     </>
   );
 };
