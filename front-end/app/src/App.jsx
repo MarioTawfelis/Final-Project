@@ -1,21 +1,30 @@
 import './App.css';
 import Home from './pages/Home';
-import NavBar from './components/NavBar';
-import Login from './components/LoginPage';
-import UserProfile from './components/UserProfilePage';
-import RegistrationPage from './components/UserRegistration';
+import Login from './pages/Login';
+import UserProfile from './pages/UserProfile';
+import RegistrationPage from './pages/UserRegistration';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import NavBar from './components/NavBar';
+import CheckoutPage from './pages/StripePayment';
+import ProductList from './pages/ProductList';
+import './App.css'
+import Footer from './components/Footer';
+// import CheckoutPage from './StripePayment'
+
 
 function App() {
   return (
     <div className="wrapper">
-      <NavBar />
+      < NavBar />
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/" element={<Home />} />
         <Route path='/user-profile/:id' element={<UserProfile />} />
         <Route path='/user-registration' element={<RegistrationPage />} />
+        <Route path='/checkout' element={<CheckoutPage />} />
+        <Route path='/product-list' element={<ProductList />} />
       </Routes>
+      <Footer />
     </div>
   );
 }

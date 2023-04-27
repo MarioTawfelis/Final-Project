@@ -6,6 +6,7 @@ import Collection from "../components/Collection";
 import Categories from "../components/Categories";
 import Description from "../components/Description";
 import Footer from "../components/Footer";
+import NavBar from "../components/NavBar";
 
 const Home = () => {
   return (
@@ -23,9 +24,6 @@ const Home = () => {
       <article>
         <Description />
       </article>
-      <footer>
-        <Footer />
-      </footer>
     </>
   );
 };

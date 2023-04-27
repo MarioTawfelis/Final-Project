@@ -1,11 +1,18 @@
 /* Styling for mobile version */
 
+button:hover {
+    background-color:#fbfbfb61;
+    transition: 0.7s;
+}
+
+
 /* home page main text */
 .flex-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 25px;
+    
 }
 
 
@@ -43,6 +50,7 @@
 
 .carusel img {
     width: 100%;
+    padding: 10px;
 }
 
 .carusel p {
@@ -51,9 +59,15 @@
     color: #4f495e;
 }
 
-/* .react-multi-carousel-dot-list {
-    position: ;
-} */
+.react-multi-carousel-item div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.react-multi-carousel-dot button {
+    margin-right: 15px;
+}
 
 
 /* our products courusel */
@@ -61,6 +75,7 @@
 .collection {
     margin: 10px;
     text-align: center;
+    margin-bottom: 30px;
 }
 
 .collection h1 {
@@ -79,6 +94,7 @@
     border-radius: 20px;
 }
 
+
 .product-item img {
     width: 90%;
     margin-top: 10px;
@@ -88,10 +104,16 @@
 
 .product-item h3 {
     font-size: 14px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .product-item p {
     font-size: 12px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .product-item button {
@@ -104,6 +126,7 @@
     box-shadow: 0px 3px 8px #a3a2a2;
     font-size: 12px;
 }
+
 
 
 /* product categories */
@@ -211,6 +234,7 @@ figure figcaption p {
         align-items: flex-start;
         flex-wrap: nowrap;
         margin: 50px;
+        padding: 0 70px;
     }
 
     .text-box {
@@ -264,6 +288,7 @@ figure figcaption p {
 
     .product-items {
         padding: 0 10px;
+        height: 400px;
     }
 
     .product-item {
@@ -285,6 +310,10 @@ figure figcaption p {
 
     .product-item button {
         width: 180px;
+    }
+
+    .react-multiple-carousel__arrow {
+        margin-bottom: 10px; 
     }
 
     /* product categories */

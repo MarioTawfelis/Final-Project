@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'ecommerce',
     'products',
     'shipment',
+    'payments.apps.PaymentsConfig',
     'postgresql_db',
     'rest_framework.authtoken',
     'corsheaders',
@@ -161,3 +162,6 @@ CORS_ORIGIN_ALLOW_ALL = True
 CORS_ALLOW_CREDENTIALS = True
 
 AUTHENTICATION_BACKENDS = ['django.contrib.auth.backends.AllowAllUsersModelBackend']
+# Stripe authentication
+STRIPE_PUBLISHABLE_KEY = '<your test publishable key here>'
+STRIPE_SECRET_KEY = '<your test secret key here>'
