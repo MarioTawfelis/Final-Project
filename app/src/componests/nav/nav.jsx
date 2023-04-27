@@ -2,7 +2,9 @@ import { useState, useEffect, useRef } from "react";
 import { BsCart } from "react-icons/bs";
 import { MdClose } from "react-icons/md";
 import { FiMenu } from "react-icons/fi";
-import "./nav.css";
+import "../../componests/nav/nav.css"
+import React from 'react';
+
 
 function NavBar() {
   const [navbarOpen, setNavbarOpen] = useState(false);
@@ -33,7 +35,7 @@ function NavBar() {
     <>
       <nav className="navbar" ref={ref}>
         <a className="logo" href="#logo">
-          Floom
+          <h1>Floom</h1>
         </a>
         {windowWidth <= 600 ? (
           <div className="iconContainer">
@@ -81,18 +83,30 @@ function NavBar() {
           <div className="navContainer">
             <ul className="nav-bar">
               <li>
-                <a className="nav-bar"  href="#home" onClick={() => setNavbarOpen(false)}>
+                <a
+                  className="nav-bar"
+                  href="#home"
+                  onClick={() => setNavbarOpen(false)}
+                >
                   Home
                 </a>
               </li>
               <li>
-                <a className="nav-bar"  href="#Our Products" onClick={() => setNavbarOpen(false)}>
-                       Our Products
+                <a
+                  className="nav-bar"
+                  href="#Our Products"
+                  onClick={() => setNavbarOpen(false)}
+                >
+                  Our Products
                 </a>
               </li>
               <li>
-                <a className="nav-bar"  href="#Contact Us" onClick={() => setNavbarOpen(false)}>
-            Contact Us
+                <a
+                  className="nav-bar"
+                  href="#Contact Us"
+                  onClick={() => setNavbarOpen(false)}
+                >
+                  Contact Us
                 </a>
               </li>
             </ul>

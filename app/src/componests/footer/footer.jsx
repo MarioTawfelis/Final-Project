@@ -8,12 +8,15 @@ import {
   MDBIcon,
 } from "mdb-react-ui-kit";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import './footer.css';
+import './footer.css'
+// import categories from '../../../categories.json'
 
 
 
 export default function Footer() {
   const [categories, setCategories] = useState([]);
+
+
 
   useEffect(() => {
     const fetchCategories = async () => {
@@ -23,6 +26,8 @@ export default function Footer() {
       setCategories(data);
     };
     fetchCategories();
+    console.log(setCategories);
+
   }, []);
 
 
@@ -85,51 +90,10 @@ export default function Footer() {
               {categories.length > 0 && categories.map((category) => (
   <p key={category.pk}>
     <a href="#" className="text-reset items">
-      {category.name}
+      {category.fields.friendly_name}
     </a>
   </p>
 ))}
- 
-              {/* <p>
-                <a href="#" className="text-reset items">
-                  Essentials
-                </a>
-              </p>
-              <p>
-                <a href="#" className="text-reset items">
-                  Bed & Bath
-                </a>
-              </p>
-              <p>
-                <a href="#" className="text-reset items">
-                  Kitchen & Dining
-                </a>
-              </p>
-              <p>
-                <a href="#" className="text-reset items">
-                  Clearance
-                </a>
-              </p>
-              <p>
-                <a href="#" className="text-reset items">
-                  Deals
-                </a>
-              </p>
-              <p>
-                <a href="#" className="text-reset items">
-                  Jeans
-                </a>
-              </p>
-              <p>
-                <a href="#" className="text-reset items">
-                  Shirts
-                </a>
-              </p>
-              <p>
-                <a href="#" className="text-reset items">
-                  New Arrivals
-                </a>
-              </p> */}
             </MDBCol>
             {/* Display links to Contact categories with the same style as the product section */}
             <MDBCol md="4" lg="3" xl="3" className="mx-auto mb-md-0 mb-4 footer-section-columns ">
