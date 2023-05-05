@@ -51,12 +51,13 @@ This ecommerce website includes the following features:
 
 ## Contributors
 
-- Mario Tawfelis
-- Kseniia Efremova @ https://github.com/KseniiaEfremova
-- Andrew Birch @ https://github.com/BirchAD
-- Tariq Smith @ https://github.com/tariqanthonysmith
-- Masud Miah @ https://github.com/MasudMiahGIT
-- Sumeya Ahmed @ https://github.com/YA-Maya
+- <a href="https://github.com/MarioTawfelis">Mario Tawfelis</a>
+- <a href="https://github.com/KseniiaEfremova">Kseniia Efremova</a>
+- <a href="https://github.com/BirchAD">Andrew Birch</a>
+- <a href="https://github.com/HenryXanderTalent">Henry Opara</a>
+- <a href="https://github.com/tariqanthonysmith">Tariq Smith</a>
+- <a href="https://github.com/MasudMiahGIT">Masud Miah</a>
+- <a href="https://github.com/YA-Maya">Sumeya Ahmed</a>
 
 ## License
 
