@@ -59,6 +59,4 @@ This ecommerce website includes the following features:
 - <a href="https://github.com/MasudMiahGIT">Masud Miah</a>
 - <a href="https://github.com/YA-Maya">Sumeya Ahmed</a>
 
-## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
